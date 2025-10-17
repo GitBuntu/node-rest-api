@@ -1,0 +1,11 @@
+services:
+  app:
+    image: node-rest-api:v1.0.0
+    build: .
+    container_name: node-rest-api-container
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
